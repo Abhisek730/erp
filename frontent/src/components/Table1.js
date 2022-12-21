@@ -28,7 +28,7 @@ export default function Table1({ students, find }) {
 
   // function to edit student
   const updateStudent = (studid) => {
-    fetch("http://localhost:5000/editStudent", {
+    fetch("/editStudent", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -301,9 +301,9 @@ export default function Table1({ students, find }) {
           <button
             style={{ backgroundColor: "#DC4C64" }}
             className="btn"
-            // onClick={() => {
-            //   setEditStud(true);
-            // }}
+          // onClick={() => {
+          //   setEditStud(true);
+          // }}
           >
             Delete
           </button>

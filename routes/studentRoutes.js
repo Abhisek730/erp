@@ -6,7 +6,7 @@ const csvtojson = require("csvtojson")
 const student = mongoose.model("student");
 
 
-router.get('/', (req, res) => {
+router.get('/dash', (req, res) => {
     student.find()
         .then(data => { res.json(data) })
 })

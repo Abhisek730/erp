@@ -10,7 +10,7 @@ export default function StudentDeepDetails() {
   useEffect(() => {
     // fetching all students
     if (classid == "all") {
-      fetch("http://localhost:5000/", {
+      fetch("/dash", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -22,7 +22,7 @@ export default function StudentDeepDetails() {
         })
         .catch((err) => console.log(err));
     } else {
-      fetch("http://localhost:5000/mystuds", {
+      fetch("/mystuds", {
         headers: {
           "Content-Type": "application/json",
           class: classid,

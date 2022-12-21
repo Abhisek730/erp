@@ -4,7 +4,7 @@ import DashboardCard from "../components/DashboardCard";
 export default function Dashboard() {
   const [studentCount, setStudentCount] = useState("")
   useEffect(() => {
-    fetch("http://localhost:5000/", {
+    fetch("/dash", {
       headers: {
         "Content-Type": "application/json",
       },

@@ -15,7 +15,7 @@ export default function SetRollNo() {
 
   // to get student with class and section
   const findStudentWithName = () => {
-    fetch("http://localhost:5000/mystuds", {
+    fetch("/mystuds", {
       headers: {
         "Content-Type": "application/json",
         class: studentClass,
@@ -33,7 +33,7 @@ export default function SetRollNo() {
   const setRoll = () => {
     let roll = rollNo;
     students.map((student) => {
-      fetch("http://localhost:5000/setroll", {
+      fetch("/setroll", {
         method: "put",
         headers: {
           "Content-Type": "application/json",

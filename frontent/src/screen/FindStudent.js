@@ -25,7 +25,7 @@ export default function FindStudent() {
 
   // to get student with class and section
   const findStudentWithName = () => {
-    fetch("http://localhost:5000/mystuds", {
+    fetch("/mystuds", {
       headers: {
         "Content-Type": "application/json",
         class: studentClass,
@@ -42,7 +42,7 @@ export default function FindStudent() {
 
   // to find student with admmision no.
   const findStudent = () => {
-    fetch(`http://localhost:5000/findStudent/${adm}`, {
+    fetch(`/findStudent/${adm}`, {
       headers: {
         "Content-Type": "application/json",
       },

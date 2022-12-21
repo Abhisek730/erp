@@ -19,7 +19,7 @@ export default function AddStudent() {
 
   const postData = () => {
     // Sending data to server
-    fetch("http://localhost:5000/register", {
+    fetch("/register", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -140,7 +140,7 @@ export default function AddStudent() {
       <div className="import-data">
         <h2>Add Students With CSV File</h2>
         <form
-          action="http://localhost:5000/uploadFile"
+          action="/uploadFile"
           method="post"
           encType="multipart/form-data"
         >
